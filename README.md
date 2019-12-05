@@ -1,6 +1,6 @@
 
 # Smart Communications Hackathon by TotalVoice
-### Dez/2019
+##### Dez/2019
 
 ## Desafio
 O desafio é muito simples: pense em um problema de comunicação e descubra uma forma de resolvê-lo utilizando as APIs da TotalVoice.
@@ -14,6 +14,7 @@ O Smart Communications Hackathon by TotalVoice será totalmente online e todos (
 Basta realizar a inscrição e, caso você não tenha time, em breve liberaremos o acesso ao nosso canal oficial na plataforma do Discord. Lá, você poderá se conectar aos demais participantes e montar sua equipe.
 
 O Hackathon da TotalVoice acontecerá do dia 03/12 até 16/12, seguindo a seguinte programação:
+
 03/12 até 04/12 - Briefing inicial e Formação de times
 
 05/12 até 10/12 - ideação dos projetos 
