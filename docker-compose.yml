@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  modulo-02:
+    build: .
+    depends_on:
+      - postgres    
+    image: acgomes68/alpine-node:latest
+    container_name: node-${APP_NAME}
+    command: npm start
+    ports:
+    - ${APP_PORT}:3000
+    volumes:
+    - .:/usr/app
+
+  postgres:
+    image: postgres:11-alpine
+    container_name: postgres-${DB_DATABASE}
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASSWD}
+    ports:
+    - ${DB_PORT}:5432
