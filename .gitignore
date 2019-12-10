@@ -1,7 +1,4 @@
-omnistack.sublime-*
-omnistack.vscode-*
-node_modules
-.vscode.env
+.vscode
 .env
 Dockerfile
-docs
+node_modules

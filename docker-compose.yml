@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  modulo-02:
+  app:
     build: .
     depends_on:
       - postgres    
