@@ -33,9 +33,9 @@ class UserController {
       return res.status(400).json({ error: 'User already exists' });
     }
 
-    const { id, name, email, birth, cpf } = await User.create(req.body);
+    const { id, name, alias, email, birth, cpf } = await User.create(req.body);
 
-    return res.json({ id, name, email, birth, cpf });
+    return res.json({ id, name, alias, email, birth, cpf });
   }
 
   async update(req, res) {
@@ -72,11 +72,12 @@ class UserController {
       return res.status(401).json({ error: 'Invalid password' });
     }
 
-    const { id, name, birth, cpf } = await user.update(req.body);
+    const { id, name, alias, birth, cpf } = await user.update(req.body);
 
     return res.json({
       id,
       name,
+      alias,
       email,
       birth,
       cpf,
