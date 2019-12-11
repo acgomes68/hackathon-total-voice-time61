@@ -33,9 +33,9 @@ class UserController {
       return res.status(400).json({ error: 'User already exists' });
     }
 
-    const { id, name, email, provider } = await User.create(req.body);
+    const { id, name, email, birth, cpf } = await User.create(req.body);
 
-    return res.json({ id, name, email, provider });
+    return res.json({ id, name, email, birth, cpf });
   }
 
   async update(req, res) {
@@ -49,7 +49,7 @@ class UserController {
           oldPassword ? field.required() : field
         ),
       confirmPassword: Yup.string().when('password', (password, field) =>
-        password ? field.required().oneOf([yup.ref(password)]) : field
+        password ? field.required().oneOf([Yup.ref(password)]) : field
       ),
     });
 
@@ -72,13 +72,14 @@ class UserController {
       return res.status(401).json({ error: 'Invalid password' });
     }
 
-    const { id, name, provider } = await user.update(req.body);
+    const { id, name, birth, cpf } = await user.update(req.body);
 
     return res.json({
       id,
       name,
       email,
-      provider,
+      birth,
+      cpf,
     });
   }
 
