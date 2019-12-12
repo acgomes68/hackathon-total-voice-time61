@@ -1,5 +1,6 @@
 import * as Yup from 'yup';
 import User from '../models/User';
+import File from '../models/File';
 
 class UserController {
   async index(req, res) {
@@ -8,8 +9,17 @@ class UserController {
   }
 
   async show(req, res) {
-    const { id } = req.params;
-    const user = await User.findByPk(id);
+    // const { id } = req.params;
+    const id = req.userId;
+    const user = await User.findByPk(id, {
+      include: [
+        {
+          model: File,
+          as: 'avatar',
+          attributes: ['name', 'path', 'url'],
+        },
+      ],
+    });
     return res.json(user);
   }
 
@@ -72,7 +82,9 @@ class UserController {
       return res.status(401).json({ error: 'Invalid password' });
     }
 
-    const { id, name, alias, birth, cpf } = await user.update(req.body);
+    const { id, name, alias, birth, cpf, avatar_id } = await user.update(
+      req.body
+    );
 
     return res.json({
       id,
@@ -81,6 +93,7 @@ class UserController {
       email,
       birth,
       cpf,
+      avatar_id,
     });
   }
 

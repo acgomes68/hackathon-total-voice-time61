@@ -30,10 +30,6 @@ module.exports = {
         type: Sequelize.FLOAT,
         defaultValue: 0.0,
       },
-      final_balance: {
-        type: Sequelize.FLOAT,
-        defaultValue: 0.0,
-      },
       created_at: {
         type: Sequelize.DATE,
         allowNull: false,

@@ -47,10 +47,6 @@ module.exports = {
       discount: {
         type: Sequelize.FLOAT,
       },
-      amount: {
-        type: Sequelize.FLOAT,
-        allowNull: false,
-      },
       entry_type: {
         type: Sequelize.CHAR(1),
         allowNull: false,

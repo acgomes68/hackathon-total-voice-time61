@@ -13,7 +13,17 @@ class Entry extends Model {
         penalty: Sequelize.FLOAT,
         rate: Sequelize.FLOAT,
         discount: Sequelize.FLOAT,
-        amount: Sequelize.FLOAT,
+        amount: {
+          type: Sequelize.VIRTUAL,
+          get() {
+            return (
+              parseFloat(this.value) +
+              parseFloat(this.penalty) +
+              parseFloat(this.rate) -
+              parseFloat(this.discount)
+            );
+          },
+        },
         entry_type: Sequelize.CHAR(1),
         canceled_at: Sequelize.DATE,
         past: {
