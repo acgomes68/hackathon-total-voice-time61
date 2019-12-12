@@ -1,6 +1,6 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('entries', {
+    return queryInterface.createTable('cashflows', {
       id: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -14,50 +14,25 @@ module.exports = {
         onDelete: 'SET NULL',
         allowNull: true,
       },
-      owner: {
-        type: Sequelize.STRING(100),
-      },
-      provider_id: {
-        type: Sequelize.INTEGER,
-        references: { model: 'providers', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
-        allowNull: true,
-      },
-      description: {
-        type: Sequelize.STRING,
-      },
-      barcode: {
-        type: Sequelize.STRING(100),
-      },
       date: {
         type: Sequelize.DATEONLY,
         allowNull: false,
       },
-      value: {
+      opening_balance: {
         type: Sequelize.FLOAT,
-        allowNull: false,
+        defaultValue: 0.0,
       },
-      penalty: {
+      credits: {
         type: Sequelize.FLOAT,
+        defaultValue: 0.0,
       },
-      rate: {
+      debts: {
         type: Sequelize.FLOAT,
+        defaultValue: 0.0,
       },
-      discount: {
+      final_balance: {
         type: Sequelize.FLOAT,
-      },
-      amount: {
-        type: Sequelize.FLOAT,
-        allowNull: false,
-      },
-      entry_type: {
-        type: Sequelize.CHAR(1),
-        allowNull: false,
-        defaultValue: 'D',
-      },
-      canceled_at: {
-        type: Sequelize.DATE,
+        defaultValue: 0.0,
       },
       created_at: {
         type: Sequelize.DATE,
@@ -73,6 +48,6 @@ module.exports = {
   },
 
   down: queryInterface => {
-    return queryInterface.dropTable('entries');
+    return queryInterface.dropTable('cashflows');
   },
 };
