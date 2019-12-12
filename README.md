@@ -79,7 +79,7 @@ Vá para o diretório do projeto:
 cd hackathon
 ```
 
-### Project tree
+### Árvore de diretórios do projeto
 
 #### Diretório raiz ./ (arquivos de configuração)
 
@@ -91,7 +91,7 @@ cd hackathon
 .
 ├── mongo
 ├── postgres
-├── redis
+└── redis
 
 #### Diretório ./src (código fonte)
 .
