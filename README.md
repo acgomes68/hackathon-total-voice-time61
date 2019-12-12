@@ -5,9 +5,32 @@ http://hackathontotalvoice.shawee.io/
 API RESTful desenvolvida em NodeJS 10.16.3, utilizando Postgres, MongoDB e Redis.
 Todas as tecnologias descritas, bem como suas respectivas dependências são executadas através de containers Docker.
 
-## Instalar prerequisites
+## Resumo
 
-Por enquanto, foi basicamente criado para ser executado em Unix `(Linux/MacOS)`. Talvez possa ser executado também no Windows.
+1. [Instalar pré-requisitos](#install-prerequisites)
+
+    Antes de instalar verificar se os requisitos mínimos para instalação são atendidos.
+
+2. [Clonar o projeto](#clone-the-project)
+
+    Fazer o download do repositório do GitHub com o código fonte.
+
+3. [Configurar variáveis de ambiente](#configure-nginx-with-ssl-certificates)
+
+    Atualizar as variáveis de ambiente necessárias para a comunicação entre os containers.
+
+4. [Atualizar dependências](#configure-nginx-with-ssl-certificates)
+
+    Atualizar as bibliotecas e dependências utilizadas no projeto.
+
+5. [Executar a aplicação](#run-the-application)
+
+    Fazer o start de todos os containers e "subir" a aplicação.
+
+
+## Instalar pré-requisitos
+
+Por enquanto, o projeto foi desenvolvido para ser executado em Unix `(Linux/MacOS)`. Mas, provavelmente não terá problemas em ser executado no Windows.
 
 Todos os requisitos devem estar disponíveis para sua distribuição. Os mais importantes são os seguintes :
 
@@ -42,7 +65,7 @@ Esse projeto usa as seguintes portas:
 | Redis    | 6379  |
 
 
-## Clone oprojeto
+## Clonar o projeto
 
 Para instalar [Git](https://github.com/acgomes68/hackathon-total-voice-time61), faça o download e instale seguindo as instruções abaixo:
 
@@ -54,6 +77,7 @@ Vá para o diretório do projeto:
 
 ```sh
 cd hackathon
+```
 
 ### Project tree
 
@@ -146,14 +170,46 @@ cd hackathon
 Fazer um cópia do arquivo .env.example como .env
 Alterar os valores descritos no arquivo.
 
+
 ## Atualizar dependências
 Para atualizar as dependências do projeto que estão descritas no arquivo package.json, executar 
 ```sh
 yarn
+```
+caso tenha o yarn instalado OU
 
-OU caso tenha o Node instalado
 ```sh
 npm install 
+```
+caso tenha o Node instalado
+
+
+## Executar a aplicação
+
+    1. Iniciar a aplicação :
+
+    ```sh
+    sudo docker-compose up -d
+    ```
+
+    ** Por favor, aguarde uns minutos, pois talvez exista a necessidade de fazer o download das imagens que serão utilizadas para os containers...**
+
+    ```sh
+    sudo docker-compose logs -f # Para verificar a saída do log
+    ```
+
+    2. Abrir o navegador preferido:
+
+    * [http://localhost:3000](http://localhost:3000/)
+    
+    ** Substituir "localhost" pelo conteúdo da variável de ambiente APP_URL
+    ** Substituir "3000" pelo conteúdo da variável de ambiente APP_PORT
+
+
+    3. Parar e limpar os serviços
+
+    ```sh
+    sudo docker-compose down -v
 
 
 ## Integrantes
