@@ -83,87 +83,11 @@ cd hackathon
 
 #### Diretório raiz ./ (arquivos de configuração)
 
-├── .env.example (Modelo para o arquivo de variáveis de ambiente)
-├── docker-compose.yml (Arquivo com a lista dos serviços Docker utilizados)
-├── package.json (Arquivo que descreve as dependências do projeto)
-
 #### Diretório ./data (conteúdo das bases de dados)
-.
-├── mongo
-├── postgres
-└── redis
     
 #### Diretório ./src (código fonte)
-.
-├── app
-│   ├── controllers
-│   │   ├── AccountController.js
-│   │   ├── AppointmentController.js
-│   │   ├── EntryController.js
-│   │   ├── FileController.js
-│   │   ├── NotificationController.js
-│   │   ├── ProviderController.js
-│   │   ├── SessionController.js
-│   │   └── UserController.js
-│   ├── jobs
-│   │   └── CancellationMail.js
-│   ├── middlewares
-│   │   └── auth.js
-│   ├── models
-│   │   ├── Account.js
-│   │   ├── Appointment.js
-│   │   ├── Cashflow.js
-│   │   ├── Entry.js
-│   │   ├── File.js
-│   │   ├── Provider.js
-│   │   ├── ProviderType.js
-│   │   └── User.js
-│   ├── schemas
-│   │   └── Notification.js
-│   └── views
-│       └── emails
-│           ├── layouts
-│           │   └── default.hbs
-│           ├── partials
-│           │   └── footer.hbs
-│           └── cancellation.hbs
-├── config
-│   ├── auth.js
-│   ├── database.js
-│   ├── mail.js
-│   ├── mongo.js
-│   ├── multer.js
-│   ├── redis.js
-│   └── sentry.js
-├── database
-│   ├── migrations
-│   │   ├── 20191020194340-create-files.js
-│   │   ├── 20191022083937-create-users.js
-│   │   ├── 20191107201505-create-provider-types.js
-│   │   ├── 20191107202405-create-providers.js
-│   │   ├── 20191107212405-create-appointments.js
-│   │   ├── 20191211173810-create-accounts.js
-│   │   ├── 20191211174710-create-entries.js
-│   │   └── 20191212015310-create-cashflow.js
-│   ├── seeds
-│   │   ├── 20191211200838-provider-types.js
-│   │   ├── 20191211200900-providers.js
-│   │   ├── 20191211921200-files.js
-│   │   ├── 20191212021200-users.js
-│   │   └── 20191212053500-accounts.js
-│   └── index.js
-├── lib
-│   ├── Mail.js
-│   └── Queue.js
-├── app.js
-├── queue.js
-├── routes.js
-└── server.js
 
 #### Diretório ./tmp (imagens dos avatars)
-.
-└── uploads
-    └── ea1a73bc09de67b9b709afa10f8b5c49.png
 
 
 ## Configurar variáveis de ambiente
@@ -182,6 +106,7 @@ caso tenha o yarn instalado OU
 npm install 
 ```
 caso tenha o Node instalado
+Após a exeução do comando será criada uma pasta node_modules
 
 
 ## Executar a aplicação
