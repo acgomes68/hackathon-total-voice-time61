@@ -92,7 +92,7 @@ cd hackathon
 ├── mongo
 ├── postgres
 └── redis
-
+    
 #### Diretório ./src (código fonte)
 .
 ├── app
