@@ -147,6 +147,13 @@ Fazer um cópia do arquivo .env.example como .env
 Alterar os valores descritos no arquivo.
 
 ## Atualizar dependências
+Para atualizar as dependências do projeto que estão descritas no arquivo package.json, executar 
+```sh
+yarn
+
+OU caso tenha o Node instalado
+```sh
+npm install 
 
 
 ## Integrantes
