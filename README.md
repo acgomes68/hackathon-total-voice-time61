@@ -59,8 +59,15 @@ cd hackathon
 
 #### Diretório raiz ./ (arquivos de configuração)
 
-├── docker-compose.yml
+├── .env.example (Modelo para o arquivo de variáveis de ambiente)
+├── docker-compose.yml (Arquivo com a lista dos serviços Docker utilizados)
+├── package.json (Arquivo que descreve as dependências do projeto)
 
+#### Diretório ./data (conteúdo das bases de dados)
+.
+├── mongo
+├── postgres
+├── redis
 
 #### Diretório ./src (código fonte)
 .
@@ -135,11 +142,11 @@ cd hackathon
     └── ea1a73bc09de67b9b709afa10f8b5c49.png
 
 
-#### Diretório ./data (conteúdo das bases de dados)
-.
-├── mongo
-├── postgres
-├── redis
+## Configurar variáveis de ambiente
+Fazer um cópia do arquivo .env.example como .env
+Alterar os valores descritos no arquivo.
+
+## Atualizar dependências
 
 
 ## Integrantes
