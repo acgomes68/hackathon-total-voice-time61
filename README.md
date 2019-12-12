@@ -90,7 +90,9 @@ cd hackathon
 #### Diretório ./data (conteúdo das bases de dados)
 .
 ├── mongo
+
 ├── postgres
+
 └── redis
 
 #### Diretório ./src (código fonte)
