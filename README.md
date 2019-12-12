@@ -105,23 +105,24 @@ caso tenha o yarn instalado OU
 ```sh
 npm install 
 ```
-caso tenha o Node instalado
-Após a exeução do comando será criada uma pasta node_modules
+caso tenha o Node instalado.
+
+Após a execução do comando será criada uma pasta node_modules
 
 
 ## Executar a aplicação
 
     1. Iniciar a aplicação :
 
-    ```sh
+```sh
     sudo docker-compose up -d
-    ```
+```
 
     ** Por favor, aguarde uns minutos, pois talvez exista a necessidade de fazer o download das imagens que serão utilizadas para os containers...**
 
-    ```sh
+```sh
     sudo docker-compose logs -f # Para verificar a saída do log
-    ```
+```
 
     2. Abrir o navegador preferido:
 
@@ -133,9 +134,9 @@ Após a exeução do comando será criada uma pasta node_modules
 
     3. Parar e limpar os serviços
 
-    ```sh
+```sh
     sudo docker-compose down -v
-
+```
 
 ## Integrantes
 Anderson Lima: https://www.linkedin.com/in/anderson-lima-68360289/
